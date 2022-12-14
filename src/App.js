@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import Shop from "./Shop";
@@ -13,6 +13,10 @@ import './App.css';
 
 function App() {
   const [cart, setCart] = useState([]);
+  
+  useEffect(() => {
+    document.title = 'FakeStore';
+  }, [])
 
   function updateCart(cart) {
     setCart(oldCart => oldCart.concat(cart));
