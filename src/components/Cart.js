@@ -64,7 +64,7 @@ function Cart({cart, removeFromCart}) {
                     })
                 }
             </ul>
-            {(cartItems.length) && <p>Total: {orderTotal()}</p>}
+            {(cartItems.length) && <p>Total: ${orderTotal()}</p>}
             {(!cartItems.length) && <p>No items yet.</p>}
             <button id="checkout-button" onClick={checkOut}>Checkout</button>
         </div>
